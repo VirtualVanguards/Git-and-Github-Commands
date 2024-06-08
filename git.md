@@ -24,3 +24,14 @@
 
         HEAD~(1,2,3,4.....) Determine How Many Stages Want to Reset
 
+## Branching
+### Create Branch
+    git branch "branch name"
+    e.g git branch feature/nav
+
+### View Branches
+    git branch
+
+### Switch Branches
+    git switch "branch name"
+    e.g. git switch feature/nav
