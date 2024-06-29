@@ -7,7 +7,7 @@
     git config --global core.autocrlf "input"
 
 ## Edit Global Setup
-    git config --global -e
+    git config --global -e 82
 
 ## Current Status of Saved Points
     git log --oneline
