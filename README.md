@@ -61,10 +61,11 @@
     git add . (if you want to add the changes to the staging area)
     git commit -m "message" (if you want to commit the changes)
     git branch -M main (if you want to rename the branch)
-    git remote add origin "url" (if you want to add the remote repository)
+    git remote add origin https://github.com/VirtualVanguards/Git-and-Github-Commands.git (if you want to add the remote repository)
     git push -u origin main (if you want to push the changes to the remote repository)
+
     git pull (if you want to pull the changes from the remote repository)
-    git clone "url" (if you want to clone the remote repository)
+    git clone https://github.com/VirtualVanguards/Git-and-Github-Commands.git (if you want to clone the remote repository)
     git remote -v (if you want to view the remote repository)
     git remote remove origin (if you want to remove the remote repository)
     git remote set-url origin "url" (if you want to change the url of the remote)
