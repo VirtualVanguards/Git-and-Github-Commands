@@ -35,3 +35,12 @@
 ### Switch Branches
     git switch "branch name"
     e.g. git switch feature/nav
+
+### Merge Branches
+    Can be done in main branch only
+    git merge "branch name"
+    e.g. git merge feature/nav
+
+### Delete Branches
+    git branch -d "branch name"
+    e.g. git branch -d feature/nav
