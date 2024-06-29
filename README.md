@@ -70,3 +70,5 @@
     git remote set-url origin "url" (if you want to change the url of the remote)
     git remote rename origin upstream (if you want to change the name of the remote)
     git remote rename origin origin (if you want to change the name of the remote)
+
+    
