@@ -64,8 +64,12 @@
     git remote add origin https://github.com/VirtualVanguards/Git-and-Github-Commands.git (if you want to add the remote repository)
     git push -u origin main (if you want to push the changes to the remote repository)
 
-    git pull (if you want to pull the changes from the remote repository)
+    git pull (if you want to pull the changes from the remote repository, pull same as github)
+    git pull origin main (if you want to pull the changes from main branch)
+    git pull origin "branch name" (if you want to pull the changes from the specific branch)
+
     git clone https://github.com/VirtualVanguards/Git-and-Github-Commands.git (if you want to clone the remote repository)
+    
     git remote -v (if you want to view the remote repository)
     git remote remove origin (if you want to remove the remote repository)
     git remote set-url origin "url" (if you want to change the url of the remote)
