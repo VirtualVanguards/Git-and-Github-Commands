@@ -67,6 +67,9 @@
     git pull (if you want to pull the changes from the remote repository, pull same as github)
     git pull origin main (if you want to pull the changes from main branch)
     git pull origin "branch name" (if you want to pull the changes from the specific branch)
+    git fetch origin (if you want to fetch the changes from the remote repository)
+    git rebase origin/main (if you want to rebase the changes from the remote repository)
+    git reset --hard origin/main (if you want to reset the changes from the remote repository)
 
     git clone https://github.com/VirtualVanguards/Git-and-Github-Commands.git (if you want to clone the remote repository)
     
