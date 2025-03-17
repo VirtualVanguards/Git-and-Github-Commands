@@ -1,82 +1,135 @@
-# Git & Github (What Matter's)
+# Git & GitHub Guide
 
 ## Global Setup
-    git config --global user.name "Manish Borikar"
-    git config --global user.email "manishborikar92@gmail.com"
-    git config --global core.editor "code --wait"
-    git config --global core.autocrlf "input"
+```sh
+git config --global user.name "Manish Borikar"
+git config --global user.email "manishborikar92@gmail.com"
+git config --global core.editor "code --wait"
+git config --global core.autocrlf "input"
+```
 
-## Edit Global Setup
-    git config --global -e
+## Edit Global Config
+```sh
+git config --global -e
+```
 
-## Current Status of Saved Points
-    git log --oneline
-    git log --oneline --graph
+## Viewing Commit History
+```sh
+git log --oneline      # Compact commit history
 
-## Current Status of Unstaged and Staged Files
-    git status -s
+git log --oneline --graph  # Visualize branch structure
+```
 
-## Going Back to Stage with Reset
-    git reset --hard HEAD~1
-        --hard Means Completely Vanish till Stage 
-        --soft
-        --mixed
+## Checking File Status
+```sh
+git status -s  # Show unstaged and staged files
+```
 
-        HEAD~(1,2,3,4.....) Determine How Many Stages Want to Reset
+## Resetting Commits
+```sh
+git reset --hard HEAD~1  # Completely remove last commit
+
+git reset --soft HEAD~1  # Keep changes staged
+
+git reset --mixed HEAD~1  # Keep changes unstaged
+```
+- `HEAD~(1,2,3,...)` determines how many commits to reset.
 
 ## Branching
-### Create Branch
-    git branch "branch name"
-    e.g git branch feature/nav
+### Creating a New Branch
+```sh
+git branch <branch_name>
+# Example: git branch feature/nav
+```
 
-### View Branches
-    git branch
-    git branch -a
-    -a means All Branches
+### Viewing Branches
+```sh
+git branch         # List local branches
+git branch -a      # List all branches (local & remote)
+```
 
-### Switch Branches
-    git switch "branch name"
-    e.g. git switch feature/nav
+### Switching Branches
+```sh
+git switch <branch_name>
+# Example: git switch feature/nav
+```
+- Create and switch to a new branch:
+```sh
+git switch -c <branch_name>
+# Example: git switch -c feature/nav
+```
 
-    Create and Switch Branch
-    git switch -c "branch name"
-    e.g. git switch -c feature/nav
+### Merging Branches
+- Merging can only be done in the main branch:
+```sh
+git merge <branch_name>
+# Example: git merge feature/nav
+```
 
-### Merge Branches
-    Can be done in main branch only
-    git merge "branch name"
-    e.g. git merge feature/nav
+### Deleting a Branch
+```sh
+git branch -d <branch_name>
+# Example: git branch -d feature/nav
+```
 
-### Delete Branches
-    git branch -d "branch name"
-    e.g. git branch -d feature/nav
+## Git Stash
+```sh
+git stash       # Save changes temporarily
+git stash apply # Restore stashed changes
+```
 
-### Git Stash
-    git stash (Save Changes) 
-    git stash apply (Apply Changes)
-    
-## Github Contribution
-### Github Setup
-    git init (if you want to initialize the repository)
-    git add . (if you want to add the changes to the staging area)
-    git commit -m "message" (if you want to commit the changes)
-    git branch -M main (if you want to rename the branch)
-    git remote add origin https://github.com/VirtualVanguards/Git-and-Github-Commands.git (if you want to add the remote repository)
-    git push -u origin main (if you want to push the changes to the remote repository)
+## Cloning a Repository
+```sh
+git clone <repo_url>
+# Example: git clone https://github.com/user/repository.git
+```
+- Clone a specific branch:
+```sh
+git clone --branch <branch_name> --single-branch <repo_url>
+# Example: git clone --branch main --single-branch https://github.com/user/repository.git
+```
 
-    git pull (if you want to pull the changes from the remote repository, pull same as github)
-    git pull origin main (if you want to pull the changes from main branch)
-    git pull origin "branch name" (if you want to pull the changes from the specific branch)
-    git fetch origin (if you want to fetch the changes from the remote repository)
-    git rebase origin/main (if you want to rebase the changes from the remote repository)
-    git reset --hard origin/main (if you want to reset the changes from the remote repository)
+## GitHub Contributions
+### Initializing a Repository
+```sh
+git init                     # Initialize a new Git repository
+git add .                    # Stage all changes
+git commit -m "commit message" # Commit changes
+git branch -M main           # Rename branch to 'main'
+```
+- Add a remote repository:
+```sh
+git remote add origin <repo_url>
+# Example: git remote add origin https://github.com/user/repository.git
+```
+- Push changes:
+```sh
+git push -u origin main
+```
 
-    git clone https://github.com/VirtualVanguards/Git-and-Github-Commands.git (if you want to clone the remote repository)
-    
-    git remote -v (if you want to view the remote repository)
-    git remote remove origin (if you want to remove the remote repository)
-    git remote set-url origin "url" (if you want to change the url of the remote)
-    git remote rename origin upstream (if you want to change the name of the remote)
-    git remote rename origin origin (if you want to change the name of the remote)
+### Pulling & Fetching Changes
+```sh
+git pull              # Pull latest changes from the remote repository
+git pull origin main  # Pull changes from the main branch
+git pull origin <branch_name> # Pull changes from a specific branch
+git fetch origin      # Fetch changes without merging
+```
+- Rebase changes:
+```sh
+git rebase origin/main
+```
+- Reset to remote state:
+```sh
+git reset --hard origin/main
+```
 
-    
+### Remote Repository Management
+```sh
+git remote -v            # View remote repositories
+git remote remove origin # Remove a remote repository
+git remote set-url origin <new_url> # Change remote URL
+git remote rename origin upstream  # Rename a remote repository
+```
+
+This guide provides essential Git and GitHub commands for effective version control and collaboration. 🚀
+
