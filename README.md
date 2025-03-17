@@ -123,6 +123,13 @@ git rebase origin/main
 git reset --hard origin/main
 ```
 
+### Force Push and Other Options
+```sh
+git push --force origin main       # Force push changes to main branch (overwrites remote branch)
+git push --force-with-lease origin main  # Safer force push to main branch (checks if remote branch changed)
+git push origin --delete <branch_name>  # Delete a remote branch
+```
+
 ### Remote Repository Management
 ```sh
 git remote -v            # View remote repositories
@@ -132,4 +139,3 @@ git remote rename origin upstream  # Rename a remote repository
 ```
 
 This guide provides essential Git and GitHub commands for effective version control and collaboration. 🚀
-
